@@ -1,0 +1,369 @@
+﻿@model Jobs.Models.Profissional
+
+@{
+    ViewData["Title"] = "";
+}
+
+
+<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
+
+
+<head>
+    <script data-ad-client="ca-pub-7000957350875154" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+
+<section style="position: relative">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="~/image/rm_rhu_banner01.jpg" alt="Primeiro Slide">
+                <div class="carousel-faixa">
+                    <h4 class="ng-binding">Seja Bem Vindo</h4>
+                    <p class="ng-binding">Cadastre seu currículo para participar dos nossos processos seletivos.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="~/image/rm_rhu_banner02.jpg" alt="Segundo Slide">
+                <div class="carousel-faixa">
+                    <h4 class="ng-binding">Cadastre-se</h4>
+                    <p class="ng-binding">Cadastre seu currículo para participar dos nossos processos seletivos.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="~/image/rm_rhu_banner03.jpg" alt="Terceiro Slide">
+                <div class="carousel-faixa">
+                    <h4 class="ng-binding">Junte-se a nós!</h4>
+                    <p class="ng-binding">
+                        Nossa equipe precisa de compromentida e engajada em nosso objetivos.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+    </div>
+</section>
+<br />
+
+<h4>
+    Cadastre-se para visualizar e candidatar-se a vagas de emprego!
+</h4>
+<hr />
+
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="IncluirProfissional" id="MyForm" enctype="multipart/form-data" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <div class="row">
+                    <div class="col">
+                        <input asp-for="Nome" class="form-control" placeholder="Nome" required/>
+                        <span asp-validation-for="Nome" class="text-danger"></span>
+                    </div>
+                    <div class="col">
+                        <input asp-for="SobreNome" class="form-control" placeholder="SobreNome"  required/>
+                        <span asp-validation-for="SobreNome" class="text-danger"></span>
+                    </div>
+                    <div class="col">
+                        <input asp-for="Cpf" class="form-control cpf-mask" placeholder="CPF Ex.: 000.000.000-00" />
+                        <span asp-validation-for="Cpf" class="text-danger"></span>
+                    </div>
+                </div> <br />
+
+                <div class="row">
+                    <div class="col">
+                        <input type="date" asp-for="Nascimento" class="form-control date-mask" placeholder="Ex.: dd/mm/aaaa" />
+                        <span asp-validation-for="Nascimento" class="text-danger"></span>
+                    </div>
+                    <div class="col">
+                        <select class="form-control" asp-for="Genero">
+                            <option value="M">Masculino</option>
+                            <option value="F">Feminino</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-control" asp-for="EstadoCivil">
+                            <option value="Solteiro">Solteiro(a)</option>
+                            <option value="Casado">Casado(a)</option>
+                            <option value="Divorciado">Divorciado(a)</option>
+                            <option value="Viúvo">Viúvo(a)</option>
+                            <option value="Separado">Separado(a)</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>                <br />
+            <br />
+
+
+
+
+
+            <fieldset>
+                <legend>Endereço</legend>
+                <div class="row">
+                    <div class="col">
+                        <input asp-for="Cep" class="form-control cep-mask" placeholder="Cep" />
+                        <span asp-validation-for="Cep" class="text-danger"></span>
+                    </div>
+                    <div class="col">
+                        <input asp-for="Endereco" class="form-control" placeholder="Endereço" />
+                        <span asp-validation-for="Endereco" class="text-danger"></span>
+                    </div>
+                    <div class="col">
+                        <input asp-for="NumeroEndereco" value="" class="form-control" placeholder="Número" />
+                        <span asp-validation-for="NumeroEndereco" class="text-danger"></span>
+                    </div>
+                </div><br />
+
+
+
+
+                <div class="row">
+                    <div class="col">
+                        <input asp-for="Complemento" class="form-control" placeholder="Complemento" />
+                        <span asp-validation-for="Complemento" class="text-danger"></span>
+                    </div>
+                    <div class="col">
+                        <input asp-for="Bairro" class="form-control" placeholder="Bairro" />
+                        <span asp-validation-for="Bairro" class="text-danger"></span>
+                    </div>
+                    <div class="col">
+                        <input asp-for="Cidade" class="form-control" placeholder="Cidade" />
+                        <span asp-validation-for="Cidade" class="text-danger"></span>
+                    </div>
+                </div>
+            </fieldset>
+            <br />
+            <br />
+
+
+            <fieldset>
+                <legend>Informações importantes</legend>
+
+                <div class="row">
+                    <div class="col">
+                        <input asp-for="Telefone" class="form-control" placeholder="Ex.: (00) 0000-0000" />
+                        <span asp-validation-for="Telefone" class="text-danger"></span>
+                    </div>
+                    <div class="col">
+                        <input asp-for="Email" class="form-control" placeholder="Email" required/>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+
+                    <div class="col">
+                        <select class="form-control" asp-for="GrauFormacao">
+                            <option value="Ensino Medio Completo">Ensino Medio Completo</option>
+                            <option value="Ensino Medio Incompleto">Ensino Medio Incompleto</option>
+                            <option value="Superior Completo ">Superior Completo</option>
+                            <option value="Superior Incompleto ">Superior Incompleto</option>
+                            <option value="Graduação">Graduação</option>
+                            <option value="Bacharelado">Bacharelado</option>
+                            <option value="Licenciatura">Licenciatura</option>
+                            <option value="Pós Graduação">Pós Graduação</option>
+                            <option value="Mestrado">Mestrado</option>
+                            <option value="Doutorado">Doutorado</option>
+                        </select>
+                    </div>
+                </div>
+                <br />
+
+
+
+
+
+
+                <div class="row">
+                    <div class="col">
+                        <input asp-for="CursoFormacao" class="form-control" placeholder="Curso de Formação" />
+                        <span asp-validation-for="CursoFormacao" class="text-danger"></span>
+                    </div>
+
+                    <div class="col">
+                        <input asp-for="Idiomas" class="form-control" placeholder="Idiomas: Inglês/Francês/Espanhol" />
+                        <span asp-validation-for="Idiomas" class="text-danger"></span>
+                    </div>
+
+                    <div class="col">
+                        <input asp-for="CargoPretendido" class="form-control" placeholder="Cargo Pretendido" />
+                        <span asp-validation-for="CargoPretendido" class="text-danger"></span>
+                    </div>
+                </div>
+                <br />
+
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <input asp-for="PretensaoSalarial" class="form-control" placeholder=" Pretensão Salarial" />
+                        <span asp-validation-for="PretensaoSalarial" class="text-danger"></span>
+                    </div>
+                </div><br />
+
+                <div class="row">
+                    <div class="col-6">
+                        <input type="file" name="Curriculo" asp-for="Curriculo"  class="form-control" required/>
+                        <span asp-validation-for="Curriculo" class="text-danger"></span>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col">
+                        <label class="form-check-label">
+                            <input class="" asp-for="Empregado" /> @Html.DisplayNameFor(model => model.Empregado)
+                        </label>
+                    </div>
+
+                    <div class="col">
+                        <label class="form-check-label">
+                            <input class="" asp-for="DisponibilidadeViagem" /> @Html.DisplayNameFor(model => model.DisponibilidadeViagem)
+                        </label>
+                    </div>
+
+                    <div class="col">
+                        <label class="form-check-label">
+                            <input class="" asp-for="DisponibilidadeMorarFora" /> @Html.DisplayNameFor(model => model.DisponibilidadeMorarFora)
+                        </label>
+                    </div>
+                </div><br />
+
+
+
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <input type="submit" id="btnSalvar" value="Cadastrar" class="btn btn-primary btn-Salvar" />
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="disclaimer">
+                    <span>
+                        Ao cadastrar um Currículo HR Jobs, você concorda com os Termos de Serviço do HR Jobs, consente com a nossa Política de Cookies e a Política de Privacidade e concorda em ser contatado por empresas através do HR Jobs.
+                        Além disso, você consente em receber mensagens de marketing do HR Jobs, podendo cancelar o recebimento por meio do link "cancelar recebimento" disponibilizado em nossas mensagens, ou conforme o processo detalhado em nossos termos.
+                    </span>
+                </div>
+            </fieldset>
+            <br /><br /><br /><br>
+
+        </form>
+
+
+        <div class="container">
+            <section id="EmpresasContratantes" class="vg-section empresas-contratantes">
+                <div class="empresas-contratantes">
+                    <h3 class="home-section-title">As melhores empresas contratam aqui</h3>
+                    <p class="home-section-subtitle">Mais de 3.000 clientes anunciam suas oportunidades de empregos.</p>
+                    <div class="links-empresas">
+                        <figure class="svg-empresa">
+                            <a href="">
+                                <img alt="Itau" class="itau" src="~/image/logo-itau.svg" style="width:64px">
+                            </a>
+                        </figure>
+
+                        <figure class="svg-empresa">
+                            <a href="">
+                                <img alt="TIM" class="tim" src="~/image/logo-tim.svg" style="width:106px">
+                            </a>
+                        </figure>
+
+                        <figure class="svg-empresa">
+                            <a href="">
+                                <img alt="Ipiranga" class="ipiranga" src="~/image/logo-ipiranga.svg" style="width:106px" />
+                            </a>
+                        </figure>
+
+                        <figure class="svg-empresa">
+                            <a href="">
+                                <img alt="Bunge" class="bunge" src="~/image/logo-bunge.svg" style="width:106px">
+                            </a>
+                        </figure>
+
+                        <figure class="svg-empresa">
+                            <a href="">
+                                <img alt="Amil" class="amil" src="~/image/logo-amil.svg" style="width:106px">
+                            </a>
+                        </figure>
+
+                        <figure class="svg-empresa">
+                            <a href="">
+                                <img alt="Votorantim" class="votorantim" src="~/image/logo-votorantim.svg" style="width:106px">
+                            </a>
+                        </figure>
+
+                        <figure class="svg-empresa">
+                            <a href="">
+                                <img alt="Suzano" class="suzano" src="~/image/logo-suzano-new.svg" style="width:106px">
+                            </a>
+                        </figure>
+
+                        <figure class="svg-empresa">
+                            <a href="">
+                                <img alt="C&amp;A" class="cea" src="~/image/logo-CeA.svg" style="width:106px">
+                            </a>
+                        </figure>
+
+                        <figure class="svg-empresa">
+                            <a href="">
+                                <img alt="C&amp;A" class="lojas-americanas" src="~/image/logo-lojas-americanas.svg" style="width:106px">
+                            </a>
+                        </figure>
+
+                        <figure class="svg-empresa">
+                            <a href="">
+                                <img alt="Coca Cola" class="coca-cola" src="~/image/logo-coca-cola.svg" style="width:106px">
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div id="cphConteudo_pnlNumeros">
+
+                        <div id="bne_numeros">
+                            <div>
+                                <i class="fa fa-file-text fa-3x"></i>
+                                <h2>
+                                    17.079.003
+                                </h2>
+                                <h6>Currículos</h6>
+                            </div>
+                            <div>
+                                <i class="fa fa-window-maximize fa-3x"></i>
+                                <h2>
+                                    445.877
+                                </h2>
+                                <h6>Vagas</h6>
+                            </div>
+                            <div>
+                                <i class="fa fa-industry fa-3x"></i>
+                                <h2>
+                                    109.789
+                                </h2>
+                                <h6>Empresas</h6>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+

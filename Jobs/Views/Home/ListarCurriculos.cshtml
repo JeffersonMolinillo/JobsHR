@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Jobs.Models.Profissional>
+
+@{
+    ViewData["Title"] = "ListarCurriculos";
+}
+
+<h1>Listar Curriculos</h1>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SobreNome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cpf)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Curriculo)
+            </th>
+
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SobreNome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cpf)
+                </td>
+
+                <td>
+                    @if (item.Curriculo == null)
+                    {
+                        <a href="" style="color:red">Curriculo Não Anexado</a>
+                    }
+                    else
+                    {
+                        <a href="@Url.Action("BuscarCurriculo", "Home", new { id = item.IdProfissional })">Visualizar Curriculo</a>
+
+                    }
+                <td></td>
+
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("DetalhesProfissional", "DetalhesProfissional", new {  id=item.IdProfissional }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
