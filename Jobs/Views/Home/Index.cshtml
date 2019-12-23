@@ -8,6 +8,7 @@
 <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
 
 
+
 <head>
     <script data-ad-client="ca-pub-7000957350875154" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
@@ -73,11 +74,11 @@
                 <legend>Dados Pessoais</legend>
                 <div class="row">
                     <div class="col">
-                        <input asp-for="Nome" class="form-control" placeholder="Nome" required/>
+                        <input asp-for="Nome" class="form-control" placeholder="Nome" required />
                         <span asp-validation-for="Nome" class="text-danger"></span>
                     </div>
                     <div class="col">
-                        <input asp-for="SobreNome" class="form-control" placeholder="SobreNome"  required/>
+                        <input asp-for="SobreNome" class="form-control" placeholder="SobreNome" required />
                         <span asp-validation-for="SobreNome" class="text-danger"></span>
                     </div>
                     <div class="col">
@@ -162,7 +163,7 @@
                         <span asp-validation-for="Telefone" class="text-danger"></span>
                     </div>
                     <div class="col">
-                        <input asp-for="Email" class="form-control" placeholder="Email" required/>
+                        <input asp-for="Email" class="form-control" placeholder="Email" required />
                         <span asp-validation-for="Email" class="text-danger"></span>
                     </div>
 
@@ -217,8 +218,8 @@
 
                 <div class="row">
                     <div class="col-6">
-                        <input type="file" name="Curriculo" asp-for="Curriculo"  class="form-control" required/>
-                        <span asp-validation-for="Curriculo" class="text-danger"></span>
+                        <input type="file"  name="Curriculo" asp-for="Curriculo"  class="form-control" required placeholder="pdf" />
+                        <span asp-validation-for="Curriculo" class="text-danger">Formato Permitido Pdf</span>
                     </div>
                 </div>
                 <br />

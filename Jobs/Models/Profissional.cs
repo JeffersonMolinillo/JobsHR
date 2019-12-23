@@ -42,7 +42,7 @@ namespace Jobs.Models
 
 
         [Display(Name = "Currículo")]
-        [DataType(DataType.ImageUrl)]
+        [DataType(DataType.Upload)]
         public byte[] Curriculo { get; set; }
 
         public string MimeType { get; set; }

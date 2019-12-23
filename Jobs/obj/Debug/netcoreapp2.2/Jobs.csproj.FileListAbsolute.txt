@@ -5,6 +5,7 @@ C:\Users\Adm\source\repos\Jobs\Jobs\bin\Debug\netcoreapp2.2\Jobs.dll
 C:\Users\Adm\source\repos\Jobs\Jobs\bin\Debug\netcoreapp2.2\Jobs.pdb
 C:\Users\Adm\source\repos\Jobs\Jobs\bin\Debug\netcoreapp2.2\Jobs.Views.dll
 C:\Users\Adm\source\repos\Jobs\Jobs\bin\Debug\netcoreapp2.2\Jobs.Views.pdb
+C:\Users\Adm\source\repos\Jobs\Jobs\obj\Debug\netcoreapp2.2\Jobs.csprojAssemblyReference.cache
 C:\Users\Adm\source\repos\Jobs\Jobs\obj\Debug\netcoreapp2.2\Jobs.csproj.CoreCompileInputs.cache
 C:\Users\Adm\source\repos\Jobs\Jobs\obj\Debug\netcoreapp2.2\Jobs.RazorAssemblyInfo.cache
 C:\Users\Adm\source\repos\Jobs\Jobs\obj\Debug\netcoreapp2.2\Jobs.RazorAssemblyInfo.cs

@@ -35,6 +35,7 @@ namespace Jobs.Controllers
         [HttpPost]
         public IActionResult IncluirProfissional(Profissional profissional, IFormFile curriculo)
       {
+
            if(!ModelState.IsValid)
             {
                 return View("Index");
@@ -46,6 +47,11 @@ namespace Jobs.Controllers
                 profissional.MimeType = curriculo.ContentType;
             }
 
+            if (profissional.MimeType != "application/pdf")
+            {
+                ModelState.AddModelError("", "Erro:  Formato do currículo inválido para visualização, formato suportado (PDF)");
+                return View("Index");
+            }            
             Context.Add<Profissional>(profissional);
             Context.SaveChanges();
             return RedirectToAction("MensagemProfissional");
