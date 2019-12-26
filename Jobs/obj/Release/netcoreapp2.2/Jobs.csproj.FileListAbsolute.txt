@@ -34,3 +34,4 @@ C:\Users\Adm\source\repos\Jobs\Jobs\obj\Release\netcoreapp2.2\Jobs.Views.pdb
 C:\Users\Adm\source\repos\Jobs\Jobs\obj\Release\netcoreapp2.2\Jobs.dll
 C:\Users\Adm\source\repos\Jobs\Jobs\obj\Release\netcoreapp2.2\Jobs.pdb
 C:\Users\Adm\source\repos\Jobs\Jobs\obj\Release\netcoreapp2.2\Jobs.csproj.CopyComplete
+C:\Users\Adm\source\repos\Jobs\Jobs\obj\Release\netcoreapp2.2\Razor\Views\Home\IncluirProfissional.g.cshtml.cs

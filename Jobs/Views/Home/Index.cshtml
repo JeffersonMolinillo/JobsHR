@@ -58,313 +58,275 @@
 </section>
 <br />
 
-<h4>
-    Cadastre-se para visualizar e candidatar-se a vagas de emprego!
-</h4>
-<hr />
 
 
 
 
-<div class="row">
-    <div class="col-md-12">
-        <form asp-action="IncluirProfissional" id="MyForm" enctype="multipart/form-data" method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <fieldset>
-                <legend>Dados Pessoais</legend>
-                <div class="row">
-                    <div class="col">
-                        <input asp-for="Nome" class="form-control" placeholder="Nome" required />
-                        <span asp-validation-for="Nome" class="text-danger"></span>
-                    </div>
-                    <div class="col">
-                        <input asp-for="SobreNome" class="form-control" placeholder="SobreNome" required />
-                        <span asp-validation-for="SobreNome" class="text-danger"></span>
-                    </div>
-                    <div class="col">
-                        <input asp-for="Cpf" class="form-control cpf-mask" placeholder="CPF Ex.: 000.000.000-00" />
-                        <span asp-validation-for="Cpf" class="text-danger"></span>
-                    </div>
-                </div> <br />
-
-                <div class="row">
-                    <div class="col">
-                        <input type="date" asp-for="Nascimento" class="form-control date-mask" placeholder="Ex.: dd/mm/aaaa" />
-                        <span asp-validation-for="Nascimento" class="text-danger"></span>
-                    </div>
-                    <div class="col">
-                        <select class="form-control" asp-for="Genero">
-                            <option value="M">Masculino</option>
-                            <option value="F">Feminino</option>
-                        </select>
-                    </div>
-                    <div class="col">
-                        <select class="form-control" asp-for="EstadoCivil">
-                            <option value="Solteiro">Solteiro(a)</option>
-                            <option value="Casado">Casado(a)</option>
-                            <option value="Divorciado">Divorciado(a)</option>
-                            <option value="Viúvo">Viúvo(a)</option>
-                            <option value="Separado">Separado(a)</option>
-                        </select>
-                    </div>
+<div class="row sqs-row" style="padding:120px 44px">
+    <div class="col sqs-col-6 span-6">
+        <div class="row sqs-row">
+            <div class="col sqs-col-5 span-5">
+                <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-97be9fb93f59d8227f84">
+                    <div class="sqs-block-content"><h1 style="white-space:  pre-wrap; color:#E15A18;">Tenha agora mesmo o seu currículo  cadastrado aqui no portal.</h1></div>
                 </div>
-            </fieldset>                <br />
-            <br />
-
-
-
-
-
-            <fieldset>
-                <legend>Endereço</legend>
-                <div class="row">
-                    <div class="col">
-                        <input asp-for="Cep" class="form-control cep-mask" placeholder="Cep" />
-                        <span asp-validation-for="Cep" class="text-danger"></span>
-                    </div>
-                    <div class="col">
-                        <input asp-for="Endereco" class="form-control" placeholder="Endereço" />
-                        <span asp-validation-for="Endereco" class="text-danger"></span>
-                    </div>
-                    <div class="col">
-                        <input asp-for="NumeroEndereco" value="" class="form-control" placeholder="Número" />
-                        <span asp-validation-for="NumeroEndereco" class="text-danger"></span>
-                    </div>
-                </div><br />
-
-
-
-
-                <div class="row">
-                    <div class="col">
-                        <input asp-for="Complemento" class="form-control" placeholder="Complemento" />
-                        <span asp-validation-for="Complemento" class="text-danger"></span>
-                    </div>
-                    <div class="col">
-                        <input asp-for="Bairro" class="form-control" placeholder="Bairro" />
-                        <span asp-validation-for="Bairro" class="text-danger"></span>
-                    </div>
-                    <div class="col">
-                        <input asp-for="Cidade" class="form-control" placeholder="Cidade" />
-                        <span asp-validation-for="Cidade" class="text-danger"></span>
-                    </div>
+            </div>
+            <div class="col sqs-col-1 span-1">
+                <div class="sqs-block spacer-block sqs-block-spacer sized vsize-1" data-block-type="21" id="block-fbccf9acf5cd0ffc8fc9">
+                    <div class="sqs-block-content">&nbsp;</div>
                 </div>
-            </fieldset>
-            <br />
-            <br />
+            </div>
+        </div>
+    </div><div class="col sqs-col-6 span-6">
+        <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-fdc47db15a8209df73f9"><div class="sqs-block-content"><h3 style="white-space: pre-wrap; color:#12395D;font-family: Fjalla One;">várias empresas buscando currículos e profissionais</h3><p style="white-space: pre-wrap;">Não perca tempo!</p><p style="white-space: pre-wrap;">Cadastre agora mesmo seu currículo e confie no seu taco. Temos muitas empresas buscando profissionais qualificados para preencher suas vagas e oportunidades de trabalho.</p><p style="white-space: pre-wrap;">Quem sabe o seu currículo será o próximo a ser selecionado, não é mesmo?</p><p style="white-space: pre-wrap;"><strong>Aqui no Portal JobsHR Talentos suas chances são maiores!</strong></p></div></div>
+        <button class="nav-link text-dark btn-primary" onclick="window.location.href='http://www.jobshr.com.br/Home/IncluirProfissional'">Cadastre seu curriculo</button>
 
-
-            <fieldset>
-                <legend>Informações importantes</legend>
-
-                <div class="row">
-                    <div class="col">
-                        <input asp-for="Telefone" class="form-control" placeholder="Ex.: (00) 0000-0000" />
-                        <span asp-validation-for="Telefone" class="text-danger"></span>
-                    </div>
-                    <div class="col">
-                        <input asp-for="Email" class="form-control" placeholder="Email" required />
-                        <span asp-validation-for="Email" class="text-danger"></span>
-                    </div>
-
-
-                    <div class="col">
-                        <select class="form-control" asp-for="GrauFormacao">
-                            <option value="Ensino Medio Completo">Ensino Medio Completo</option>
-                            <option value="Ensino Medio Incompleto">Ensino Medio Incompleto</option>
-                            <option value="Superior Completo ">Superior Completo</option>
-                            <option value="Superior Incompleto ">Superior Incompleto</option>
-                            <option value="Graduação">Graduação</option>
-                            <option value="Bacharelado">Bacharelado</option>
-                            <option value="Licenciatura">Licenciatura</option>
-                            <option value="Pós Graduação">Pós Graduação</option>
-                            <option value="Mestrado">Mestrado</option>
-                            <option value="Doutorado">Doutorado</option>
-                        </select>
-                    </div>
-                </div>
-                <br />
-
-
-
-
-
-
-                <div class="row">
-                    <div class="col">
-                        <input asp-for="CursoFormacao" class="form-control" placeholder="Curso de Formação" />
-                        <span asp-validation-for="CursoFormacao" class="text-danger"></span>
-                    </div>
-
-                    <div class="col">
-                        <input asp-for="Idiomas" class="form-control" placeholder="Idiomas: Inglês/Francês/Espanhol" />
-                        <span asp-validation-for="Idiomas" class="text-danger"></span>
-                    </div>
-
-                    <div class="col">
-                        <input asp-for="CargoPretendido" class="form-control" placeholder="Cargo Pretendido" />
-                        <span asp-validation-for="CargoPretendido" class="text-danger"></span>
-                    </div>
-                </div>
-                <br />
-
-
-                <div class="row">
-                    <div class="col-md-2">
-                        <input asp-for="PretensaoSalarial" class="form-control" placeholder=" Pretensão Salarial" />
-                        <span asp-validation-for="PretensaoSalarial" class="text-danger"></span>
-                    </div>
-                </div><br />
-
-                <div class="row">
-                    <div class="col-6">
-                        <input type="file"  name="Curriculo" asp-for="Curriculo"  class="form-control" required placeholder="pdf" />
-                        <span asp-validation-for="Curriculo" class="text-danger">Formato Permitido Pdf</span>
-                    </div>
-                </div>
-                <br />
-                <div class="row">
-                    <div class="col">
-                        <label class="form-check-label">
-                            <input class="" asp-for="Empregado" /> @Html.DisplayNameFor(model => model.Empregado)
-                        </label>
-                    </div>
-
-                    <div class="col">
-                        <label class="form-check-label">
-                            <input class="" asp-for="DisponibilidadeViagem" /> @Html.DisplayNameFor(model => model.DisponibilidadeViagem)
-                        </label>
-                    </div>
-
-                    <div class="col">
-                        <label class="form-check-label">
-                            <input class="" asp-for="DisponibilidadeMorarFora" /> @Html.DisplayNameFor(model => model.DisponibilidadeMorarFora)
-                        </label>
-                    </div>
-                </div><br />
-
-
-
-                <div class="row">
-                    <div class="col">
-                        <div class="form-group">
-                            <input type="submit" id="btnSalvar" value="Cadastrar" class="btn btn-primary btn-Salvar" />
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="disclaimer">
-                    <span>
-                        Ao cadastrar um Currículo HR Jobs, você concorda com os Termos de Serviço do HR Jobs, consente com a nossa Política de Cookies e a Política de Privacidade e concorda em ser contatado por empresas através do HR Jobs.
-                        Além disso, você consente em receber mensagens de marketing do HR Jobs, podendo cancelar o recebimento por meio do link "cancelar recebimento" disponibilizado em nossas mensagens, ou conforme o processo detalhado em nossos termos.
-                    </span>
-                </div>
-            </fieldset>
-            <br /><br /><br /><br>
-
-        </form>
-
-
-        <div class="container">
-            <section id="EmpresasContratantes" class="vg-section empresas-contratantes">
-                <div class="empresas-contratantes">
-                    <h3 class="home-section-title">As melhores empresas contratam aqui</h3>
-                    <p class="home-section-subtitle">Mais de 3.000 clientes anunciam suas oportunidades de empregos.</p>
-                    <div class="links-empresas">
-                        <figure class="svg-empresa">
-                            <a href="">
-                                <img alt="Itau" class="itau" src="~/image/logo-itau.svg" style="width:64px">
-                            </a>
-                        </figure>
-
-                        <figure class="svg-empresa">
-                            <a href="">
-                                <img alt="TIM" class="tim" src="~/image/logo-tim.svg" style="width:106px">
-                            </a>
-                        </figure>
-
-                        <figure class="svg-empresa">
-                            <a href="">
-                                <img alt="Ipiranga" class="ipiranga" src="~/image/logo-ipiranga.svg" style="width:106px" />
-                            </a>
-                        </figure>
-
-                        <figure class="svg-empresa">
-                            <a href="">
-                                <img alt="Bunge" class="bunge" src="~/image/logo-bunge.svg" style="width:106px">
-                            </a>
-                        </figure>
-
-                        <figure class="svg-empresa">
-                            <a href="">
-                                <img alt="Amil" class="amil" src="~/image/logo-amil.svg" style="width:106px">
-                            </a>
-                        </figure>
-
-                        <figure class="svg-empresa">
-                            <a href="">
-                                <img alt="Votorantim" class="votorantim" src="~/image/logo-votorantim.svg" style="width:106px">
-                            </a>
-                        </figure>
-
-                        <figure class="svg-empresa">
-                            <a href="">
-                                <img alt="Suzano" class="suzano" src="~/image/logo-suzano-new.svg" style="width:106px">
-                            </a>
-                        </figure>
-
-                        <figure class="svg-empresa">
-                            <a href="">
-                                <img alt="C&amp;A" class="cea" src="~/image/logo-CeA.svg" style="width:106px">
-                            </a>
-                        </figure>
-
-                        <figure class="svg-empresa">
-                            <a href="">
-                                <img alt="C&amp;A" class="lojas-americanas" src="~/image/logo-lojas-americanas.svg" style="width:106px">
-                            </a>
-                        </figure>
-
-                        <figure class="svg-empresa">
-                            <a href="">
-                                <img alt="Coca Cola" class="coca-cola" src="~/image/logo-coca-cola.svg" style="width:106px">
-                            </a>
-                        </figure>
-                    </div>
-
-                    <div id="cphConteudo_pnlNumeros">
-
-                        <div id="bne_numeros">
-                            <div>
-                                <i class="fa fa-file-text fa-3x"></i>
-                                <h2>
-                                    17.079.003
-                                </h2>
-                                <h6>Currículos</h6>
-                            </div>
-                            <div>
-                                <i class="fa fa-window-maximize fa-3x"></i>
-                                <h2>
-                                    445.877
-                                </h2>
-                                <h6>Vagas</h6>
-                            </div>
-                            <div>
-                                <i class="fa fa-industry fa-3x"></i>
-                                <h2>
-                                    109.789
-                                </h2>
-                                <h6>Empresas</h6>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
+    </div>
+</div>
+<div class="card-group ">
+    <div class="card text-center">
+        <img class="card-img-top" src="~/image/business-team-meeting-boardroom.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Nossa Missão / Visão</h5>
+            <p class="card-text">Atender nossos Clientes, com agilidade, ética e qualidade; contribuindo com seus resultados através das Pessoas que integram suas equipes.Compreender, acompanhar e atender as necessidades dos nossos Clientes, agregando valor ao seu Negócio.</p>
+            <p class="card-text"><small class="text-muted">Última atualização há 3 minutos</small></p>
+        </div>
+    </div>
+    <div class="card text-center">
+        <img class="card-img-top" src="~/image/professional-smiling-woman.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Recrutamento e Seleção</h5>
+            <p class="card-text">A JobsHR Brasil tem grande preocupação em captar os melhores profissionais, dentro do perfil solicitado pelos nossos Clientes, com isso agregamos valor ao seu Custo x Benefício. Utilizamos técnicas adequadas em cada processo seletivo.</p>
+            <p class="card-text"><small class="text-muted">Última atualização há 3 minutos</small></p>
+        </div>
+    </div>
+    <div class="card text-center">
+        <img class="card-img-top" src="~/image/construction-in-progress.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Mão de Obra Temporária</h5>
+            <p class="card-text">Trabalhamos de acordo com a Lei n º 6.019 e do Decreto Lei nº 73.84, onde o funcionário é contratado por um período de 180 (cento e oitenta) dias, podendo o contrato ser prorrogado por mais 90 dias. Nosso objetivo é assegurar maior comodidade e tempo livre aos nossos Clientes.</p>
+            <p class="card-text"><small class="text-muted">Última atualização há 3 minutos</small></p>
         </div>
     </div>
 </div>
 
 
+
+
+
+
+
+
+<div class="container">
+    <section id="EmpresasContratantes" class="vg-section empresas-contratantes">
+        <div class="empresas-contratantes">
+            <h3 class="home-section-title">As melhores empresas contratam aqui</h3>
+            <p class="home-section-subtitle">Mais de 3.000 clientes anunciam suas oportunidades de empregos.</p>
+            <div class="links-empresas">
+                <figure class="svg-empresa">
+                    <a href="">
+                        <img alt="Itau" class="itau" src="~/image/logo-itau.svg" style="width:64px">
+                    </a>
+                </figure>
+
+                <figure class="svg-empresa">
+                    <a href="">
+                        <img alt="TIM" class="tim" src="~/image/logo-tim.svg" style="width:106px">
+                    </a>
+                </figure>
+
+                <figure class="svg-empresa">
+                    <a href="">
+                        <img alt="Ipiranga" class="ipiranga" src="~/image/logo-ipiranga.svg" style="width:106px" />
+                    </a>
+                </figure>
+
+                <figure class="svg-empresa">
+                    <a href="">
+                        <img alt="Bunge" class="bunge" src="~/image/logo-bunge.svg" style="width:106px">
+                    </a>
+                </figure>
+
+                <figure class="svg-empresa">
+                    <a href="">
+                        <img alt="Amil" class="amil" src="~/image/logo-amil.svg" style="width:106px">
+                    </a>
+                </figure>
+
+                <figure class="svg-empresa">
+                    <a href="">
+                        <img alt="Votorantim" class="votorantim" src="~/image/logo-votorantim.svg" style="width:106px">
+                    </a>
+                </figure>
+
+                <figure class="svg-empresa">
+                    <a href="">
+                        <img alt="Suzano" class="suzano" src="~/image/logo-suzano-new.svg" style="width:106px">
+                    </a>
+                </figure>
+
+                <figure class="svg-empresa">
+                    <a href="">
+                        <img alt="C&amp;A" class="cea" src="~/image/logo-CeA.svg" style="width:106px">
+                    </a>
+                </figure>
+
+                <figure class="svg-empresa">
+                    <a href="">
+                        <img alt="C&amp;A" class="lojas-americanas" src="~/image/logo-lojas-americanas.svg" style="width:106px">
+                    </a>
+                </figure>
+
+                <figure class="svg-empresa">
+                    <a href="">
+                        <img alt="Coca Cola" class="coca-cola" src="~/image/logo-coca-cola.svg" style="width:106px">
+                    </a>
+                </figure>
+            </div>
+
+            <div id="cphConteudo_pnlNumeros">
+
+                <div id="bne_numeros">
+                    <div>
+                        <i class="fa fa-file-text fa-3x"></i>
+                        <h2>
+                            17.079.003
+                        </h2>
+                        <h6>Currículos</h6>
+                    </div>
+                    <div>
+                        <i class="fa fa-window-maximize fa-3x"></i>
+                        <h2>
+                            445.877
+                        </h2>
+                        <h6>Vagas</h6>
+                    </div>
+                    <div>
+                        <i class="fa fa-industry fa-3x"></i>
+                        <h2>
+                            109.789
+                        </h2>
+                        <h6>Empresas</h6>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<!-- Footer -->
+<footer class="page-footer font-small blue-grey lighten-5">
+
+    <div style="background-color: #E15A18;">
+        <div class="container">
+
+
+            <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+                <!-- Facebook -->
+                <a class="fb-ic">
+                    <i class="fab fa-facebook-f white-text mr-4"> </i>
+                </a>
+                <!-- Twitter -->
+                <a class="tw-ic">
+                    <i class="fab fa-twitter white-text mr-4"> </i>
+                </a>
+                <!-- Google +-->
+                <a class="gplus-ic">
+                    <i class="fab fa-google-plus-g white-text mr-4"> </i>
+                </a>
+                <!--Linkedin -->
+                <a class="li-ic">
+                    <i class="fab fa-linkedin-in white-text mr-4"> </i>
+                </a>
+                <!--Instagram-->
+                <a class="ins-ic">
+                    <i class="fab fa-instagram white-text"> </i>
+                </a>
+
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row-->
+
+    </div>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+
+        <!-- Grid row -->
+        <div class="row mt-3 dark-grey-text">
+
+            <!-- Grid column -->
+            <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">Empresa</h6>
+                <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <a class="dark-grey-text" href="#!">Carreira</a>
+                </p>
+                <p>
+                    <a class="dark-grey-text" href="#!">Notícias</a>
+                </p>
+                <p>
+                    <a class="dark-grey-text" href="#!">Sustentabilidade</a>
+                </p>
+
+
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">
+                    Produtos
+                </h6>
+                <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <a class="dark-grey-text" href="#!">Busca de produtos (EN)</a>
+                </p>
+                <p>
+                    <a class="dark-grey-text" href="#!">Cross Industry Solutions</a>
+                </p>
+                <p>
+                    <a class="dark-grey-text" href="#!">Inovação (EN)</a>
+                </p>
+
+
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">Contato</h6>
+                <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <i class="fas fa-home mr-3"></i> São Paulo, SP
+                </p>
+                <p>
+                    <i class="fas fa-envelope mr-3"></i> postmaster@jobshr.com.br
+                </p>
+
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+    <!-- Copyright -->
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->

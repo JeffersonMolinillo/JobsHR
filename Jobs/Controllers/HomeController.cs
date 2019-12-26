@@ -18,12 +18,6 @@ namespace Jobs.Controllers
             this.Context = context;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-       
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
@@ -31,7 +25,21 @@ namespace Jobs.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        
+
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+
+        [HttpGet]
+        public IActionResult IncluirProfissional()
+        {
+            return View();
+        }
+
+
+
         [HttpPost]
         public IActionResult IncluirProfissional(Profissional profissional, IFormFile curriculo)
       {

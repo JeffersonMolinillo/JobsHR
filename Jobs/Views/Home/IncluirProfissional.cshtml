@@ -1,0 +1,227 @@
+﻿@model Jobs.Models.Profissional
+
+@{
+    ViewData["Title"] = "";
+}
+
+
+<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
+
+
+
+<head>
+    <script data-ad-client="ca-pub-7000957350875154" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+
+
+<h4>
+    Cadastre-se para visualizar e candidatar-se a vagas de emprego!
+</h4>
+<hr />
+
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="IncluirProfissional" id="MyForm" enctype="multipart/form-data" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <div class="row">
+                    <div class="col">
+                        <input asp-for="Nome" class="form-control" placeholder="Nome" required />
+                        <span asp-validation-for="Nome" class="text-danger"></span>
+                    </div>
+                    <div class="col">
+                        <input asp-for="SobreNome" class="form-control" placeholder="SobreNome" required />
+                        <span asp-validation-for="SobreNome" class="text-danger"></span>
+                    </div>
+                    <div class="col">
+                        <input asp-for="Cpf" class="form-control cpf-mask" placeholder="CPF Ex.: 000.000.000-00" />
+                        <span asp-validation-for="Cpf" class="text-danger"></span>
+                    </div>
+                </div> <br />
+
+                <div class="row">
+                    <div class="col">
+                        <input type="date" asp-for="Nascimento" class="form-control date-mask" placeholder="Ex.: dd/mm/aaaa" />
+                        <span asp-validation-for="Nascimento" class="text-danger"></span>
+                    </div>
+                    <div class="col">
+                        <select class="form-control" asp-for="Genero">
+                            <option value="M">Masculino</option>
+                            <option value="F">Feminino</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="form-control" asp-for="EstadoCivil">
+                            <option value="Solteiro">Solteiro(a)</option>
+                            <option value="Casado">Casado(a)</option>
+                            <option value="Divorciado">Divorciado(a)</option>
+                            <option value="Viúvo">Viúvo(a)</option>
+                            <option value="Separado">Separado(a)</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>                <br />
+            <br />
+
+
+
+
+
+            <fieldset>
+                <legend>Endereço</legend>
+                <div class="row">
+                    <div class="col">
+                        <input asp-for="Cep" class="form-control cep-mask" placeholder="Cep" />
+                        <span asp-validation-for="Cep" class="text-danger"></span>
+                    </div>
+                    <div class="col">
+                        <input asp-for="Endereco" class="form-control" placeholder="Endereço" />
+                        <span asp-validation-for="Endereco" class="text-danger"></span>
+                    </div>
+                    <div class="col">
+                        <input asp-for="NumeroEndereco" value="" class="form-control" placeholder="Número" />
+                        <span asp-validation-for="NumeroEndereco" class="text-danger"></span>
+                    </div>
+                </div><br />
+
+
+
+
+                <div class="row">
+                    <div class="col">
+                        <input asp-for="Complemento" class="form-control" placeholder="Complemento" />
+                        <span asp-validation-for="Complemento" class="text-danger"></span>
+                    </div>
+                    <div class="col">
+                        <input asp-for="Bairro" class="form-control" placeholder="Bairro" />
+                        <span asp-validation-for="Bairro" class="text-danger"></span>
+                    </div>
+                    <div class="col">
+                        <input asp-for="Cidade" class="form-control" placeholder="Cidade" />
+                        <span asp-validation-for="Cidade" class="text-danger"></span>
+                    </div>
+                </div>
+            </fieldset>
+            <br />
+            <br />
+
+
+            <fieldset>
+                <legend>Informações importantes</legend>
+
+                <div class="row">
+                    <div class="col">
+                        <input asp-for="Telefone" class="form-control" placeholder="Ex.: (00) 0000-0000" />
+                        <span asp-validation-for="Telefone" class="text-danger"></span>
+                    </div>
+                    <div class="col">
+                        <input asp-for="Email" class="form-control" placeholder="Email" required />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+
+                    <div class="col">
+                        <select class="form-control" asp-for="GrauFormacao">
+                            <option value="Ensino Medio Completo">Ensino Medio Completo</option>
+                            <option value="Ensino Medio Incompleto">Ensino Medio Incompleto</option>
+                            <option value="Superior Completo ">Superior Completo</option>
+                            <option value="Superior Incompleto ">Superior Incompleto</option>
+                            <option value="Graduação">Graduação</option>
+                            <option value="Bacharelado">Bacharelado</option>
+                            <option value="Licenciatura">Licenciatura</option>
+                            <option value="Pós Graduação">Pós Graduação</option>
+                            <option value="Mestrado">Mestrado</option>
+                            <option value="Doutorado">Doutorado</option>
+                        </select>
+                    </div>
+                </div>
+                <br />
+
+
+
+
+
+
+                <div class="row">
+                    <div class="col">
+                        <input asp-for="CursoFormacao" class="form-control" placeholder="Curso de Formação" />
+                        <span asp-validation-for="CursoFormacao" class="text-danger"></span>
+                    </div>
+
+                    <div class="col">
+                        <input asp-for="Idiomas" class="form-control" placeholder="Idiomas: Inglês/Francês/Espanhol" />
+                        <span asp-validation-for="Idiomas" class="text-danger"></span>
+                    </div>
+
+                    <div class="col">
+                        <input asp-for="CargoPretendido" class="form-control" placeholder="Cargo Pretendido" />
+                        <span asp-validation-for="CargoPretendido" class="text-danger"></span>
+                    </div>
+                </div>
+                <br />
+
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <input asp-for="PretensaoSalarial" class="form-control" placeholder=" Pretensão Salarial" />
+                        <span asp-validation-for="PretensaoSalarial" class="text-danger"></span>
+                    </div>
+                </div><br />
+
+                <div class="row">
+                    <div class="col-6">
+                        <input type="file" name="Curriculo" asp-for="Curriculo" class="form-control" required placeholder="pdf" />
+                        <span asp-validation-for="Curriculo" class="text-danger">Formato Permitido Pdf</span>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col">
+                        <label class="form-check-label">
+                            <input class="" asp-for="Empregado" /> @Html.DisplayNameFor(model => model.Empregado)
+                        </label>
+                    </div>
+
+                    <div class="col">
+                        <label class="form-check-label">
+                            <input class="" asp-for="DisponibilidadeViagem" /> @Html.DisplayNameFor(model => model.DisponibilidadeViagem)
+                        </label>
+                    </div>
+
+                    <div class="col">
+                        <label class="form-check-label">
+                            <input class="" asp-for="DisponibilidadeMorarFora" /> @Html.DisplayNameFor(model => model.DisponibilidadeMorarFora)
+                        </label>
+                    </div>
+                </div><br />
+
+
+
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <input type="submit" id="btnSalvar" value="Cadastrar" class="btn btn-primary btn-Salvar" />
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="disclaimer">
+                    <span>
+                        Ao cadastrar um Currículo HR Jobs, você concorda com os Termos de Serviço do HR Jobs, consente com a nossa Política de Cookies e a Política de Privacidade e concorda em ser contatado por empresas através do HR Jobs.
+                        Além disso, você consente em receber mensagens de marketing do HR Jobs, podendo cancelar o recebimento por meio do link "cancelar recebimento" disponibilizado em nossas mensagens, ou conforme o processo detalhado em nossos termos.
+                    </span>
+                </div>
+            </fieldset>
+            <br /><br /><br /><br>
+
+        </form>
+
+
+      
